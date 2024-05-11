@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18;
+}
+body {
+  background-color: hsla(283, 100%, 91%, 0.365);
+}
+.bg-img {
+  position: absolute;
+  height: 300px;
+  background: url(../images/bg-desktop-light.jpg) no-repeat center top / cover;
+}
+.full {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  top: 60px;
+}
+header {
+  width: min(550px, 90%);
+}
+header > div {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px 50px;
+}
+h1 {
+  font-size: 36px;
+  color: hsl(0, 0%, 98%);
+  font-weight: 700;
+  height: 37px;
+  letter-spacing: 20px;
+}
+#new-task-form .content {
+  border-radius: 5px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(0, 0%, 98%);
+}
+#fill-span {
+  color: red;
+  font-weight: 400;
+  visibility: hidden;
+}
+input[type~="text"] {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-weight: 400;
+}
+input[type~="text"]:focus {
+  outline: none;
+}
+input[type="checkbox"] {
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin: 17.5px;
+}
+input[type="checkbox"]:hover {
+  background: linear-gradient(rgba(87, 221, 255, 0.5), rgb(192, 88, 243, 0.5));
+}
+input[type="checkbox"]:checked {
+  background: linear-gradient(rgba(87, 221, 255), rgb(192, 88, 243));
+}
+input[type="checkbox"]:checked::after {
+  position: absolute;
+  content: " ";
+  left: 18.5px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon-check.svg) no-repeat center / contain;
+}
+main {
+  position: relative;
+  width: min(550px, 90%);
+  border: none;
+  margin-top: 25px;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+.task {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  height: 60px;
+}
+.task:hover {
+  height: 90px;
+}
+.task .content {
+  height: 60px;
+  width: 100%;
+  display: flex;
+}
+.act {
+  position: absolute;
+  right: 0px;
+  display: none;
+}
+.task:hover .act {
+  display: block;
+}
+button {
+  margin-right: 15px;
+  border: none;
+  background-color: transparent;
+  color: rgba(128, 128, 128, 0.75);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  color: rgba(128, 128, 128);
+}
+button:disabled {
+  text-decoration: line-through;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 50px;
+  font-size: 15px;
+  color: hsl(236, 9%, 61%);
+}
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 15px;
+  }
+  .bg-img {
+    height: 200px;
+    background-image: url(../images/bg-mobile-light.jpg);
+  }
+  main {
+    margin-top: 15px;
+  }
+  .task {
+    height: 50px;
+  }
+  h1 {
+    font-size: 25px;
+    height: 25px;
+  }
+
+  .actions span {
+    font-size: 12px;
+  }
+  .actions span button {
+    font-size: 12px;
+  }
+  header > div {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  #new-task-form .content {
+    height: 50px;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  input[type="checkbox"]:checked::after {
+    left: 19px;
+    width: 15px;
+    height: 15px;
+  }
+  .actions {
+    height: 40px;
+  }
+}
+.after-checked {
+  text-decoration: line-through;
+  color: green;
+}

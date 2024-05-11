@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO Application</title>
+    <script src="./js/script.js" type="text/javascript"></script>
+    <style type="text/css">
+      @import "./Style/style.css";
+    </style>
+    <link rel="stylesheet" type="text/css" href="./Style/style.css" />
+  </head>
+  <body>
+    <div style="width: 100%" class="bg-img"></div>
+    <div class="full">
+      <header>
+        <div>
+          <h1>TODO APP</h1>
+        </div>
+        <form id="new-task-form">
+          <div class="content">
+            <input id="task-checkbox" type="checkbox" />
+            <input
+              type="text"
+              id="new-task-input"
+              placeholder="Create a new todo..."
+            />
+          </div>
+        </form>
+        <span id="fill-span">Please fill out the task text</span>
+      </header>
+      <main>
+        <section class="task-list">
+          <div id="tasks"></div>
+        </section>
+        <section class="actions">
+          <span id="counter">0 item(s)</span>
+          <span id="btn">
+            <button id="show-checked">show-checked</button>
+            <button id="show-unchecked">show-unchecked</button>
+          </span>
+        </section>
+      </main>
+    </div>
+    <footer><p>Codded by / Osan Salah & Zhwan Osman</p></footer>
+  </body>
+</html>
