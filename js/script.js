@@ -121,5 +121,5 @@ function ch_unch_btn(list_el, btn1, btn2, j, counter) {
       }
     }
   });
-  TaskCounter(counterf, i);
+  TaskCounter(counter, i);
 }
