@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
     });
     del.addEventListener("click", () => {
       task_el.remove();
-      TaskCounter(counter, list_el);
+      TaskCounter(counter, list_el.children.length);
     });
     edit.addEventListener("click", () => {
       if (edit.innerHTML == "Edit") {
@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
         task_content_text.toggleAttribute("readonly");
       }
     });
-    TaskCounter(counter, list_el); ///zhmardny task akan
+    TaskCounter(counter, list_el.children.length); ///zhmardny task akan
   });
   ////// dwgmay show-checked
   show_checked_btn.addEventListener("click", () => {
@@ -98,8 +98,8 @@ window.addEventListener("load", () => {
   });
 });
 ///functions
-function TaskCounter(Counter, TaskList, init) {
-  Counter.innerHTML = (init ? init : TaskList.children.length) + " item(s)";
+function TaskCounter(Counter, num) {
+  Counter.innerHTML = num + " item(s)";
 }
 function ch_unch_btn(list_el, btn1, btn2, j, counter) {
   var i = list_el.childNodes.length;
@@ -121,5 +121,5 @@ function ch_unch_btn(list_el, btn1, btn2, j, counter) {
       }
     }
   });
-  TaskCounter(counter, list_el, i);
+  TaskCounter(counter, i);
 }

@@ -73,7 +73,7 @@ input[type="checkbox"]:hover {
 input[type="checkbox"]:checked {
   background: linear-gradient(rgba(87, 221, 255), rgb(192, 88, 243));
 }
-input[type="checkbox"]:checked::after {
+input[type="checkbox"]::after {
   position: absolute;
   content: " ";
   left: 18.5px;
@@ -179,7 +179,7 @@ footer {
     width: 20px;
     height: 20px;
   }
-  input[type="checkbox"]:checked::after {
+  input[type="checkbox"]::after {
     left: 19px;
     width: 15px;
     height: 15px;
